@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #f8f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .lbl {
+            font-weight: bold;
+        }
+
+        .box {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form id="regForm" onsubmit="return validateForm()">
+        <label for="name" class="lbl">Full Name:</label><br>
+        <input type="text" id="name" placeholder="Enter Full Name" class="box"><br><br>
+
+        <label for="email" class="lbl">Email:</label><br>
+        <input type="email" id="email" placeholder="Enter Email" class="box"><br><br>
+
+        <label for="phone" class="lbl">Phone Number:</label><br>
+        <input type="number" id="phone" placeholder="Enter Phone Number" class="box"><br><br>
+
+        <label for="dob" class="lbl">DOB:</label><br>
+        <input type="date" id="dob" class="box"><br><br>
+
+        <label for="gender" class="lbl">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+
+        <label for="department" class="lbl">Department:</label>
+        <select id="department" class="box">
+            <option value="">--Select Department--</option>
+            <option value="CS">CS</option>
+            <option value="EE">EE</option>
+            <option value="BBA">BBA</option>
+        </select><br><br>
+
+        <label for="skill" class="lbl">Skill:</label><br>
+        <input type="checkbox" id="html" name="skill" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="skill" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="js" name="skill" value="JAVASCRIPT">
+        <label for="js">JAVASCRIPT</label><br>
+        <input type="checkbox" id="python" name="skill" value="Python">
+        <label for="python">PYTHON</label><br><br>
+
+        <label for="address" class="lbl">Address:</label><br>
+        <textarea id="address" placeholder="Enter Address" class="box"></textarea><br><br>
+
+        <label for="profile" class="lbl">Add Profile Picture:</label><br>
+        <input type="file" id="profile"><br><br>
+
+        <label for="password" class="lbl">Password:</label><br>
+        <input type="password" id="password" placeholder="Enter Password" class="box"><br><br>
+
+        <label for="cpassword" class="lbl">Confirm Password:</label><br>
+        <input type="password" id="cpassword" placeholder="Confirm Password" class="box"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var dob = document.getElementById("dob").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var department = document.getElementById("department").value;
+            var address = document.getElementById("address").value;
+            var password = document.getElementById("password").value;
+            var cpassword = document.getElementById("cpassword").value;
+
+            // check empty fields
+            if (name == "" || email == "" || phone == "" || dob == "" || !gender || department == "" || address == "" || password == "" || cpassword == "") {
+                alert("Please fill all required fields!");
+                return false;
+            }
+
+            // simple email check
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+
+            // password match
+            if (password != cpassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

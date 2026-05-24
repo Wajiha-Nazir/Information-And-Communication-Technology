@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO</title>
+    <style>
+        #nav {
+            float: right;
+            margin-right: 50px;
+        }
+
+        li {
+
+            display: inline-block;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 30px 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #pic {
+            float: right;
+            margin: 30px 350px 30px 50px;
+        }
+
+        #pic img {
+            height: 400px;
+            width: 300px;
+            border-radius: 20px;
+        }
+
+        #intro {
+            margin: 200px 50px 150px 300px;
+            line-height: 8px;
+        }
+
+        #intro p {
+            font-size: 15px;
+        }
+
+        #intro button,
+        #contact button {
+            padding: 12px 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: rgb(255 209 102);
+            font-weight: bold;
+        }
+
+        section {
+            text-align: center;
+            margin: 30px 250px 30px 150px;
+        }
+
+        #about {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #12192a;
+            border-radius: 20px;
+            padding: 25px 31px;
+        }
+
+        #about div.container {
+            width: 23.33%;
+        }
+
+        #blogs {
+            width: 82%;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 20px;
+            background-color: #12192a;
+        }
+
+        #blogs img {
+            padding: 0px 0px 50px 60px;
+            height: 300px;
+        }
+
+        #contact {
+            width: 82%;
+            display: flex;
+            border-radius: 20px;
+            background-color: #12192a;
+        }
+
+        #info p {
+            font-size: 24px;
+        }
+
+        input {
+            border: 0.01px solid white;
+            padding: 20px 50px 20px 10px;
+            background-color: #12192a;
+            width: 500px;
+            font-size: 18px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: #081025; color: white;">
+    <nav>
+        <div id="nav">
+            <ul>
+                <li><a href="#head">HOME</a>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#about">SERVICES</a></li>
+                <li><a href="#about">SKILLS</a></li>
+                <li><a href="#blogs">BLOG</a></li>
+                <li><a href="#contact" style="color: yellow;">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div id="head">
+            <div id="intro" style=" float: left;">
+                <p>Hi There! I'm</p>
+                <h1 style="font-size: 50px;">Wajiha Nazir</h1>
+                <p>A creative freelancer and front-end developer crafting clean and modern web experiances.</p>
+                <button style="cursor: pointer;">Hire Me</button>
+            </div>
+            <div id="pic">
+                <img src="pic.jpeg" alt="Loading">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="about">
+            <div class="container">
+                <h1>About Me</h1>
+                <p>I build delightful web- products - frontend, backend and beautiful UI</p>
+            </div>
+            <div class="container">
+                <h1>Skills</h1>
+                <ol>
+                    <li>HTML, </li>
+                    <li>CSS, </li>
+                    <li>Javascript, </li>
+                    <li>C, </li>
+                    <li>React</li>
+                </ol>
+            </div>
+            <div class="container">
+                <h1>Availibility</h1>
+                <p>Open for Freelance work - remote friendly</p>
+            </div>
+        </div>
+    </section><br>
+    <section id="blogs">
+        <div>
+            <h1 style="font-size: 44px; text-align: left; padding-left: 30px;">Selected Projects</h1>
+            <div id="b-img" style="padding-left: 85px;">
+                <img src="blog1.jpeg" alt="Loading">
+                <img src="blog2.jpeg" alt="Loading">
+                <img src="blog3.jpg" alt="loading">
+            </div>
+        </div>
+    </section><br>
+    <section id="contact" style="text-align: left;">
+        <div id="info" style="padding: 0px 0px 30px 50px;">
+            <h1 style="padding: 0px; text-align: left; font-size: 44px;">Contact</h1>
+            <p>Email: sahitowajiha@gmial.com</p>
+            <p style="padding: 0px;">or send a message</p>
+            <form action="#">
+                <input type="text" id="name" placeholder="Your Name"><br><br>
+                <input type="email" id="emial" placeholder="Email"><br><br>
+                <input type="text" id="message" placeholder="Message"><br><br>
+                <button style="text-align: left; cursor: pointer;">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p style="text-align: center;">&copy; 2025 Wajiha Nazir -- Designed with &hearts;</p>
+    </footer>
+</body>
+
+</html>
