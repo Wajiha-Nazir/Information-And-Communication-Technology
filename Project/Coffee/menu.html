@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Menu</title>
+  <link rel="icon" href="images/logo.png">
+  <style>
+    body {
+      background-color: #1f1712;
+    }
+
+    #header {
+      height: 20vh;
+      text-align: center;
+
+      color: #e4c180;
+    }
+
+    h1 {
+      margin-top: 0px;
+      font-size: 6rem;
+      font-family: "Georgia";
+    }
+
+    .subtext {
+      margin-top: -70px;
+    }
+
+    .section {
+      border-radius: 12px;
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: flex;
+      gap: 5rem;
+    }
+
+    .card {
+      border-radius: 10px;
+      width: 500px;
+      height: 400px;
+      text-align: center;
+      flex: 1;
+      margin-bottom: 150px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 12px;
+      margin: 0 auto;
+      display: block;
+      object-fit: fill;
+    }
+
+    .card h3 {
+      color: #f5deb3;
+      margin: 0.5rem;
+      font-size: 2.25rem;
+    }
+
+    .card p {
+      color: #e4c180;
+      font-size: 1.25rem;
+    }
+
+    .buttons {
+      text-align: center;
+      margin: 4rem 2rem 2rem 2rem;
+    }
+
+    .menu-button {
+      background-color: #e4c180;
+      color: #261a1a;
+      font-size: 1.5rem;
+      font-family: "Georgia";
+      border-radius: 6px;
+      padding: 1.5rem;
+      text-decoration: none;
+      margin: 1rem;
+    }
+
+    .menu-button:hover {
+      background-color: #f5c56b;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h1>MENU</h1>
+    <p class="subtext">AROMA COFFEE SERVICE</p>
+  </div>
+  <section>
+    <div class="section">
+      <div class="grid">
+        <div class="card">
+          <img src="images/espresso.jpeg" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>Strong, bold, and perfect for a quick pick-me-up.</p>
+        </div>
+        <div class="card">
+          <img src="images/Cappuccino.jpeg" alt="Cappuccino" />
+          <h3>Cappuccino</h3>
+          <p>
+            Classic Italian coffee with equal parts espresso, milk, and foam.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img src="images/latte.jpg" alt="Latte" />
+          <h3>Latte</h3>
+          <p>Rich espresso blended with steamed milk and foam.</p>
+        </div>
+        <div class="card">
+          <img src="images/americano.jpeg" alt="Americano" />
+          <h3>Americano</h3>
+          <p>
+            Bold espresso softened with hot water for a smooth, rich flavor.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img src="images/mocha.jpeg" alt="Mocha" />
+          <h3>Mocha</h3>
+          <p>
+            Decadent blend of espresso, steamed milk, and chocolate syrup
+            topped with whipped cream.
+          </p>
+        </div>
+        <div class="card">
+          <img src="images/frappe.jpg" alt="Frappe" />
+          <h3>Frappe</h3>
+          <p>
+            Chilled, creamy, and delightfully frothy — the perfect blend of
+            coffee and cool indulgence.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="index.html" class="menu-button">Go to Homepage</a>
+      <a href="restaurantform.html" class="menu-button">Order Now</a>
+    </div>
+  </section>
+</body>
+
+</html>
